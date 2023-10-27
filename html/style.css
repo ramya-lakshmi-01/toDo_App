@@ -1,0 +1,64 @@
+.f1 {
+    height: 25vh;
+    width: 26vw;
+    background: lightcoral;
+    /* text-align: left; */
+    margin-left: 32vw;
+    margin-top: 4vh;
+
+}
+.submit {
+    margin: 5px;
+    color: blue;
+    font-weight: 800;
+    text-align: center;
+}
+
+.input {
+    margin: 5px;
+    color: blue;
+    font-weight: 800;
+    text-align: center;
+}
+h1{
+    top: 15vh;
+    margin: 20px;
+    text-align: center;
+    color: #590808de;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 3px 1px #e7dede;
+    /* text-shadow: 4px 3px #dbc3c3; */
+
+}
+.backgroundImg{
+    position: absolute;
+    background-image:url("../images/toDoBackgroundImg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+.inputContainer {
+    width: 30vw;
+    margin-top: 4vh;
+    /* background-color: aqua; */
+    position: absolute;
+    /* margin-left: 1vw; */
+    /* height: 20vh;
+    width: 45vw; */
+}
+.submitDiv {
+    position: absolute;
+    margin-top: 17vh;
+    margin-left: 10vw;
+}
+.navBtnDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+.btn {
+    margin: 5px;
+}
