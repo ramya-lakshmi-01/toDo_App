@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="post.css">
+    <script src="../src/scripts/toDo.js"></script>
 </head>
 <body >
-    <div class="backgroundImg">
+    <form class="backgroundImg" id="toDoForm">
         <h1> To Do List</h1>
         
             <div class="noteBox">
-                <!-- <textarea></textarea> -->
-                <img  src="../images/notes .jpg" class="noteImg">
+                <div    class="noteImg">
+                 <textarea class="taskInput" placeholder="Enter your task" id="userTask"></textarea>
+                 <input type="submit" class="taskEnterBtn" id="taskSubmit" value="Enter"></input>
+                </div>
         
             </div>
         
@@ -21,6 +24,6 @@
 
             <button class="btn"><a href="register.html"> Register</a></button>
         </div>
-    </div>
+    </form>
 </body>
 </html>

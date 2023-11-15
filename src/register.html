@@ -2,30 +2,31 @@
     <head>
         <title>Register</title>
         <link rel="stylesheet" href="style.css">
+        <script src="../src/scripts/register.js"></script>
     </head>
     <body>
         <div class="backgroundImg">
             <h1>Register</h1>
         
-            <form class="f1">  
+            <form class="f1" id="registerForm">  
                 
                 <div class="inputContainer">
                     <div class="input">
                          MAIL ID :&nbsp &nbsp &nbsp &nbsp
-                        <input type="email" >
+                        <input type="email" id="regEmail">
                     </div>
                     <div class="input">
                         USERNAME : 
-                        <input type="text" > 
+                        <input type="text" id="regUsername" > 
                     </div>
                     <div class="input">
                         PASSWORD : 
-                        <input type="password" > 
+                        <input type="password" id="regPasssword"> 
                     </div>
                 </div>
                
                     <div class="submitDiv">
-                    <input type="submit"  class="submit"></input>
+                    <input type="submit"  class="submit" id="regSubmit"></input>
                 </div>
                 
             </form>

@@ -1,0 +1,62 @@
+h1 {
+    top: 15vh;
+    margin: 20px;
+    text-align: center;
+    color: #590808de;;
+    text-shadow: 3px 1px #e7dede;
+}
+.noteBox {
+    background-color: blueviolet;
+    width: 60%;
+    height: 45vh;
+    margin-left: 20%;
+    /* border-width: 8px; 
+    border-color: rgb(60, 124, 172);
+    border-style: solid; */
+   
+    
+}
+.taskInput {
+    /* background-color: rgb(226, 43, 208); */
+    width: 60%;
+    height: 10%;
+    margin-left: 20%;
+    margin-top: 12%;
+    border-width: 1px; 
+    border-color: rgb(60, 124, 172);
+    border-style: solid;
+}
+.noteImg {
+    /* width: 100%;*/
+    height: 100%; 
+    background-size: cover;
+    /* top: 0%;
+    left: 0%; */
+    background-image: url('./images/notes.jpg');
+    background-repeat: no-repeat;
+    object-fit: fill;
+   
+}
+.taskEnterBtn {
+    margin-top: 3%;
+    margin-left: 44%;
+}
+.navBtnDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.backgroundImg{
+    position: absolute;
+    background-image:url("./images/toDoBackgroundImg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+.btn {
+    margin: 5px;
+}

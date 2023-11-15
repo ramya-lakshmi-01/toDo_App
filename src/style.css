@@ -32,7 +32,7 @@ h1{
 }
 .backgroundImg{
     position: absolute;
-    background-image:url("../images/toDoBackgroundImg.jpg");
+    background-image:url("./images/toDoBackgroundImg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
