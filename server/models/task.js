@@ -25,7 +25,6 @@ async function createTable() {
     CREATE TABLE IF NOT EXISTS tasks (
       TaskId INT NOT NULL AUTO_INCREMENT,
       UserId INT NOT NULL,
-      taskTitle VARCHAR(25) NOT NULL,
       taskDescription VARCHAR(255) NOT NULL,
       taskStatus BOOLEAN NOT NULL,
       CONSTRAINT TaskPK PRIMARY KEY(TaskId));`
@@ -40,8 +39,8 @@ createTable()
 
 async function addTasks(task){
     let sql = `
-    INSERT INTO tasks(UserId, taskTitle, taskDescription,taskStatus)
-    VALUES("${task.UserId}","${task.taskTitle}", "${task.taskDescription}", "${task.taskStatus??0}")
+    INSERT INTO tasks(UserId, taskDescription,taskStatus)
+    VALUES("${task.UserId}", "${task.taskDescription}", "${task.taskStatus??0}")
   `
 
   await con.query(sql)
@@ -54,7 +53,7 @@ async function editTask(updatedTask){
   if(existingTask.length>0){
 
     let sql = `UPDATE tasks
-      SET taskTitle = "${updatedTask.taskTitle}",taskDescription="${updatedTask.taskDescription}", taskStatus=${updatedTask.taskStatus}
+      SET taskDescription="${updatedTask.taskDescription}", taskStatus=${updatedTask.taskStatus}
       WHERE TaskId = ${updatedTask.TaskId}
     `
     await con.query(sql);

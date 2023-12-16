@@ -37,6 +37,15 @@ h1 {
     object-fit: fill;
    
 }
+.displayTask {
+    /* position: absolute; */
+    height:60%;
+    width: auto;
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-left: 7%;
+    /* background-color: pink; */
+}
 .taskEnterBtn {
     margin-top: 3%;
     margin-left: 44%;
@@ -44,7 +53,7 @@ h1 {
 .navBtnDiv {
     display: flex;
     justify-content: center;
-    margin-top: 2vh;
+    margin-top: 6vh;
 }
 
 .backgroundImg{
@@ -59,4 +68,13 @@ h1 {
 }
 .btn {
     margin: 5px;
+}
+#list{
+    height: 67%;
+    width:85%;
+    margin-top: -2.5%;
+    /* padding-top: 1%;
+    padding-left: 7%; */
+    overflow: auto;
+    background-color: rgb(220, 220, 194);
 }

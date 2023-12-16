@@ -49,6 +49,7 @@ createTable()
 // login(newUser);
 
 async function login(user) {
+  console.log('user: ', user);
   let userResult = await getUser(user.username)
   if(!userResult[0]) throw Error("Username not found!!")
   if(userResult[0].Password != user.password) throw Error("Password Incorrect!!")
@@ -58,12 +59,16 @@ async function login(user) {
 
 // Register (Create) New User
 async function register(user) {
-  let userResult = await getUser(user.username)
+  console.log('reg user recieved ip', user)
+  let userResult = await getUser(user.userName)
+  let userMail = await getUserMail(user.userEmail) 
+  console.log('userResult: ', userResult);
   if(userResult.length > 0) throw Error("Username already in use!!")
+  if(userMail.length > 0) throw Error("Email already in use!!")
 
   let sql = `
     INSERT INTO users(UserName, Password, Email)
-    VALUES("${user.username}", "${user.password}", "${user.email}")
+    VALUES("${user.userName}", "${user.userPassword}", "${user.userEmail}")
   `
 
   await con.query(sql)
@@ -95,9 +100,18 @@ async function deleteUser(user) {
 
 // Useful functions
 async function getUser(username) {
+  console.log('username: ', username);
   let sql = `
     SELECT * FROM users 
     WHERE UserName = "${username}" 
+  `
+  return await con.query(sql)
+}
+async function getUserMail(userEmail) {
+  console.log('userMail: ', userEmail);
+  let sql = `
+    SELECT * FROM users 
+    WHERE Email = "${userEmail}" 
   `
   return await con.query(sql)
 }
